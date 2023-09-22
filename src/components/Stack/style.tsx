@@ -45,6 +45,11 @@ export const StackCard = styled("div", {
   },
 
   "&:hover": {
+    "& svg": {
+      fill: "$brand1",
+      cursor: "pointer",
+    },
+
     [`& ${Text}`]: {
       opacity: 1,
       top: 0,

@@ -4,7 +4,7 @@ import dots from "@/public/static/img/background/dots.svg";
 
 export const Footer = styled("footer", {
   backgroundColor: "$grey0",
-  padding: "7rem 0",
+  padding: "4rem 0",
   backgroundImage: `url(${dots})`,
   backgroundRepeat: "no-repeat",
   backgroundPosition: "left top 8rem",
@@ -13,6 +13,7 @@ export const Footer = styled("footer", {
   },
   "@tablet": {
     backgroundPosition: "center top 1rem",
+    padding: "4rem 4rem ",
   },
   [`& ${Container}`]: {
     display: "flex",
@@ -23,11 +24,18 @@ export const Footer = styled("footer", {
       [`& ${Flex}:first-child`]: {
         marginBottom: "$5",
         flexDirection: "column",
-        textAlign: "center",
         [`& img`]: {
           marginBottom: "$2",
         },
       },
     },
+  },
+});
+
+export const UserImage = styled("img", {
+  borderRadius: "50%",
+  "@mobile": {
+    width: "2.25rem",
+    height: "2.25rem",
   },
 });

@@ -1,7 +1,7 @@
 import { Container, Flex, Box } from "@/styles/Global";
 import { Text } from "@/styles/Text";
 import { Footer as FooterWrapper } from "./style";
-import { UserImage } from "@/pages/home/style";
+import { UserImage } from "./style";
 import { userData } from "@/utils/userData";
 import { FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa";
 import { Button } from "@/styles/Buttons";
@@ -20,11 +20,15 @@ export const Footer = (): JSX.Element => {
             height={"70px"}
           />
           <Box css={{ marginLeft: "$2" }}>
-            <Text type="heading4" color="grey5" css={{ marginBottom: "$2" }}>
-              Thank you! {/* <HandEffect /> */}
+            <Text
+              type="heading4"
+              color="grey5"
+              css={{ marginBottom: "$2", textAlign: "center" }}
+            >
+              Grata pela visita! {/* <HandEffect /> */}
             </Text>
             <Text type="body1" color="grey2">
-              Follow me on my social networks and let's talk
+              Me adicione nas minhas redes sociais, vamos conversar.
             </Text>
           </Box>
         </Flex>

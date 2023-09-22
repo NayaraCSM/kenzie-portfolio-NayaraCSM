@@ -5,10 +5,10 @@ export const Button = styled("button", {
   height: "3rem",
   appearance: "none",
   background: "$whiteFixed",
-  color: "$grey1",
+  color: "$grey2",
   fontWeight: "600",
   padding: "0 2rem",
-  border: "2px solid $whiteFixed",
+  border: "2px solid $grey2",
   borderRadius: "$1",
   cursor: "pointer",
   fontSize: "1rem",
@@ -18,6 +18,9 @@ export const Button = styled("button", {
   alignItems: "center",
   width: "max-content",
   whiteSpace: "nowrap",
+  "&:hover": {
+    color: "$grey2",
+  },
 
   variants: {
     type: {
@@ -28,11 +31,11 @@ export const Button = styled("button", {
       },
       primary: {
         background: "$brand1",
-        borderColor: "$brand1",
-        color: "$whiteFixed",
+        borderColor: "$grey2",
+        color: "$grey2",
         "&:hover": {
-          backgroundColor: "$brand2",
-          borderColor: "$brand2",
+          borderColor: "$brand1",
+          color: "$brand1",
         },
         "@mobile": {
           height: "2.5rem",
@@ -41,13 +44,13 @@ export const Button = styled("button", {
         },
       },
       outline: {
-        borderColor: "$grey4",
-        color: "$grey4",
+        borderColor: "$grey2",
+        color: "$grey2",
         backgroundColor: "transparent",
 
         "&:hover": {
-          backgroundColor: "$grey4",
-          color: "$grey1",
+          borderColor: "$brand1",
+          color: "$brand1",
         },
       },
       toggleTheme: {
@@ -56,7 +59,7 @@ export const Button = styled("button", {
         maxWidth: "3rem",
         padding: "",
         borderRadius: "2rem",
-        borderColor: "$grey4",
+        borderColor: "$grey2",
         color: "$grey4",
         backgroundColor: "transparent",
         position: "relative",
@@ -85,7 +88,6 @@ export const Button = styled("button", {
 
         "@mobile": {
           position: "absolute",
-          right: "5rem",
           top: "0.375rem",
         },
       },
@@ -97,12 +99,9 @@ export const Button = styled("button", {
         "& svg": {
           fill: "$grey2",
         },
-        "&:hover": {
-          backgroundColor: "$grey1",
-        },
       },
       circle: {
-        borderColor: "$grey5",
+        borderColor: "$grey2",
         backgroundColor: "transparent",
         borderRadius: "50%",
         padding: "0",
@@ -147,11 +146,9 @@ export const Button = styled("button", {
           backgroundColor: "$grey5",
         },
         "@mobile": {
-          width: "5rem",
           height: "2.7rem",
-          minWidth: "5rem",
           minHeight: "2.7rem",
-          borderRadius: "0.5rem",
+          borderRadius: "50%",
         },
       },
     },

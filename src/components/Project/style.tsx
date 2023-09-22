@@ -2,6 +2,16 @@ import { styled } from "@/styles/stitches.config";
 import { Flex } from "@/styles/Global";
 import { Text } from "@/styles/Text";
 
+export const ListProjects = styled("ul", {
+  display: "grid",
+  gridTemplateColumns: "1fr 1fr",
+  gridGap: "4rem",
+  "@mobile": {
+    gridTemplateColumns: "1fr",
+    overflow: "hidden",
+  },
+});
+
 export const ProjectStack = styled(Flex, {
   margin: "1.25rem 0 1.25rem 0",
   "@mobileLittle": {
@@ -25,7 +35,6 @@ export const ProjectLink = styled("a", {
   fontSize: "1rem",
   color: "$grey2",
   fontWeight: "500",
-  marginRight: "$2",
   display: "flex",
   alignItems: "center",
   lineHeight: "0",
@@ -41,8 +50,12 @@ export const ProjectLink = styled("a", {
 
 export const ProjectTitle = styled(Text, {});
 
-export const Project = styled("article", {
-  marginTop: "4rem",
+export const Project = styled("li", {
+  padding: "2rem",
+  border: "2px solid $grey1",
+  borderRadius: "$1",
+  background: "$grey0",
+  opacity: "0.7",
   [`&:first-child`]: {
     [`& ${ProjectTitle}:first-child`]: {
       position: "relative",
@@ -53,7 +66,7 @@ export const Project = styled("article", {
       },
 
       "&::before": {
-        content: 'New',
+        content: "New",
         position: "absolute",
         top: "5px",
         right: "-4rem",
@@ -73,7 +86,6 @@ export const Project = styled("article", {
         "@mobile": {
           letf: 0,
           top: "-2.5rem",
-          right: "auto",
         },
       },
     },

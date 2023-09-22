@@ -4,6 +4,7 @@ import { Button } from "@/styles/Buttons";
 
 export const Navbar = styled("nav", {
   background: "$grey0",
+  opacity: "0.8",
   borderBottom: "2px solid $brand1",
   position: "fixed",
   inset: 0,
@@ -24,6 +25,14 @@ export const Navbar = styled("nav", {
 
 export const LogoTipo = styled(Flex, {
   alignItems: "center",
+});
+
+export const UserImage = styled("img", {
+  borderRadius: "50%",
+  "@mobile": {
+    width: "2.25rem",
+    height: "2.25rem",
+  },
 });
 
 export const LogoTipoText = styled("span", {
